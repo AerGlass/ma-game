@@ -25,7 +25,6 @@ int mini(int c, int d){
 	printf("Loading...");
 	u16 Pressed;
 	u16 Held;
-	printf("game");
 	consoleClear();
 
 	NF_SetRootFolder("NITROFS");
@@ -46,7 +45,7 @@ int mini(int c, int d){
 	NF_InitTextSys(0); //iniciar el motor de teclado en la pantalla superior
 	NF_InitRawSoundBuffers();
 	
-	NF_LoadTextFont("default", "normal", 256, 256, 0);	// Carga la seccion "normal" de la fuente, tamaño del mapa 256x256
+	NF_LoadTextFont("default", "normal", 256, 256, 0);	// Carga la seccion "normal" de la fuente, tamaÃ±o del mapa 256x256
 	NF_CreateTextLayer(0, 0, 0,	"normal"); // crear capa de texto
 
 	NF_LoadTiledBg("background_intro", "bg3", 256, 256);
@@ -91,8 +90,10 @@ int mini(int c, int d){
 			masp += 0.1;
 			mapx = 0;
 			NF_WriteText(0, 0, 0, 0, "You Won!!!");	// escribir texto a la pantalla
-			NF_UpdateTextLayers();
-			sleep(2);
+			for(int b = 0; b < 40000; b++){
+				printf(" ");
+				NF_UpdateTextLayers();
+			}
 			NF_ClearTextLayer(0, 0);
 			NF_UpdateTextLayers();
 			NF_CreateSprite(0, 0, 0, 0, 0, 0);
