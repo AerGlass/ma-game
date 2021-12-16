@@ -90,8 +90,8 @@ int mini(int c, int d){
 			masp += 0.1;
 			mapx = 0;
 			NF_WriteText(0, 0, 0, 0, "You Won!!!");	// escribir texto a la pantalla
-			for(int b = 0; b < 40000; b++){
-				printf(" ");
+			for(int b = 0; b < 100; b++){
+				swiWaitForVBlank();
 				NF_UpdateTextLayers();
 			}
 			NF_ClearTextLayer(0, 0);
