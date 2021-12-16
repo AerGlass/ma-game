@@ -38,7 +38,6 @@ int main(int argc, char **argv) {
 	NF_InitTiledBgBuffers();	// Inicializa los buffers para almacenar fondos
 	NF_InitTiledBgSys(0);		// Inicializa los fondos Tileados para la pantalla superior
 	NF_InitTiledBgSys(1);		// Iniciliaza los fondos Tileados para la pantalla inferior
-	// Bucle (repite para siempre)	
 	printf("%d + %d = %d", a, b, intro(a, b));
 	return 0; 
 
