@@ -40,7 +40,7 @@ int intro(int a, int b){
 	NF_CreateTiledBg(0, 3, "bg3");
 	printf("created tiledbg/n");
 
-	NF_LoadTextFont("default", "normal", 256, 256, 0);	// Carga la seccion "normal" de la fuente, tamaño del mapa 256x256
+	NF_LoadTextFont("default", "normal", 256, 256, 0);	// Carga la seccion "normal" de la fuente, tamaÃ±o del mapa 256x256
 	NF_CreateTextLayer(0, 0, 0,	"normal"); // crear capa de texto
 
 	NF_WriteText(0, 0, 0, 0, "Ma");	// escribir texto a la pantalla
@@ -50,7 +50,10 @@ int intro(int a, int b){
 	while(1) {
 	scanKeys();
 	Pressed = keysDown();
-	if(Pressed & KEY_A) printf("%d + %d = %d", c, d, mini(c, d));
+	if(Pressed & KEY_A) {
+		printf("%d + %d = %d", c, d, mini(c, d));
+		return 0;
+	}
 	swiWaitForVBlank();
 	}
 return a+b;
