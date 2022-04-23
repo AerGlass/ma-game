@@ -22,15 +22,10 @@ int intro(int a, int b){
 	NF_Set2D(0, 0);
 	NF_Set2D(1, 0);	
 	consoleDemoInit();
-	swiWaitForVBlank();
 	printf("Loading...");
 	u16 Pressed;
 	// Define el ROOT e inicializa el sistema de archivos
 	NF_SetRootFolder("NITROFS");	// Define la carpeta ROOT para usar NITROFS
-
-	// Inicializa el motor 2D
-	NF_Set2D(0, 0);				// Modo 2D_0 en ambas pantallas
-	NF_Set2D(1, 0);
 
 	// Inicializa los fondos tileados
 	NF_InitTiledBgBuffers();	// Inicializa los buffers para almacenar fondos
@@ -49,12 +44,11 @@ int intro(int a, int b){
 	NF_UpdateTextLayers();
 	while(1) {
 	scanKeys();
-	Pressed = keysDown();
-	if(Pressed & KEY_A) {
+	if(keysDown()& KEY_A) {
 		printf("%d + %d = %d", c, d, mini(c, d));
 		return 0;
 	}
 	swiWaitForVBlank();
 	}
-return a+b;
+	return a+b;
 }
