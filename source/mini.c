@@ -26,7 +26,6 @@ int mini(int c, int d){
 	u16 Pressed;
 	u16 Held;
 	NF_SetRootFolder("NITROFS");
-	NF_Set2D(0, 0);//poner 2d en la pantalla de arriba
 
 	consoleClear();
 	float ballpx = 0;
