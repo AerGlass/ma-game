@@ -16,17 +16,7 @@
 #include "intro.h"
 #include <unistd.h>
 
-int mini(int c, int d){
-	// Pantalla de espera inicializando NitroFS
-	NF_Set2D(0, 0);
-	NF_Set2D(1, 0);	
-	consoleDemoInit();
-	swiWaitForVBlank();
-	printf("Loading... If it hangs then use a freaking r4 card and not nds-bootstrap.");
-	u16 Pressed;
-	u16 Held;
-	NF_SetRootFolder("NITROFS");
-
+int mini(){
 	consoleClear();
 	float ballpx = 0;
 	float ballpy = 0;

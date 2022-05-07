@@ -16,17 +16,7 @@
 #include "intro.h"
 #include "mini.h"
 
-int intro(int a, int b){
-	int c, d;
-	// Pantalla de espera inicializando NitroFS
-	NF_Set2D(0, 0);
-	NF_Set2D(1, 0);	
-	consoleDemoInit();
-	printf("Loading...");
-	u16 Pressed;
-	// Define el ROOT e inicializa el sistema de archivos
-	NF_SetRootFolder("NITROFS");	// Define la carpeta ROOT para usar NITROFS
-
+int intro(){
 	// Inicializa los fondos tileados
 	NF_InitTiledBgBuffers();	// Inicializa los buffers para almacenar fondos
 	NF_InitTiledBgSys(0);		// Inicializa los fondos Tileados para la pantalla superior
@@ -45,7 +35,7 @@ int intro(int a, int b){
 	while(1) {
 	scanKeys();
 	if(keysDown()& KEY_A) {
-		printf("%d + %d = %d", c, d, mini(c, d));
+		mini();
 		return 0;
 	}
 	swiWaitForVBlank();

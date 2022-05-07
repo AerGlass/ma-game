@@ -4,6 +4,6 @@
 
 /* Prototypes for the functions */
 /* Sums two ints */
-int mini(int c, int d);
+int mini();
 
 #endif

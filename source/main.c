@@ -20,9 +20,8 @@
 -------------------------------------------------
 */
 int main(int argc, char **argv) {
-	int a, b;
 	consoleDemoInit();
-	printf("%d + %d = %d", a, b, intro(a, b));
+	intro();
 	return 0; 
 
 }

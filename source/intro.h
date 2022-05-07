@@ -4,6 +4,6 @@
 
 /* Prototypes for the functions */
 /* Sums two ints */
-int intro(int a, int b);
+int intro();
 
 #endif
